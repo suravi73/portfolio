@@ -1,6 +1,7 @@
 .DS_Store
 
 images/*
+test/*
 
 assets/profile.jpg
 assets/pop_out.jpg
