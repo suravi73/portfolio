@@ -53,14 +53,19 @@
             <h5 class="text-primary small mb-2">Automated Semantic IoT Data Integration for Flexible Shop Floors Using WoT Thing Descriptions</h5>
             <h6 class="text-muted small mb-3">Sep 2026</h6>
             <ul class="small mb-3">
-              <li>Developing an LLM-driven pipeline that parses WoT TDs to auto-generate RML mappings, transforming heterogeneous IoT data (JSON/CSV) into RDF triples for ontology-flexible integration.</li>
+              <li>Built an ontology-aware LLM pipeline that automatically generates validated RML mappings from W3C WoT Thing Descriptions and CSV sensor data, replacing manual knowledge-graph authoring. Evaluated against hand-authored ground truth across 4 IoT scenarios (triple-level F1, TriplesMap completeness, ontology-usage metrics).</li>
+              <li>Architected a 4-stage constraint-narrowing pipeline (CSV analysis → TD semantic mapping → RML generation → error refinement), where each stage pre-computes facts (columns, ontology terms, auto-derived TriplesMap blueprint) to shrink the next call's decision space and suppress hallucination.</li>
+              <li>Implemented a two-layer self-repair loop: LLM-invoked validation tools (Turtle/SHACL) during generation via function calling, plus a Python outer loop that re-prompts with error-type-specific templates until a valid mapping is produced (inner 5 / outer 3 cycles).</li>
+              <li>Selected Qwen3.5 over Llama 3.3 for tool-calling reliability; validated with pySHACL against W3C RML Core shapes.</li>
+              <li><strong>Stack:</strong> Python (async), Qwen3.5 + function calling, RDFLib, pySHACL, RMLMapper, FastAPI, pandas · W3C WoT TD, RML/R2RML, SOSA/SSN, QUDT, Turtle/JSON-LD</li>
               </ul>
             <div class="skill-tags">
               <span class="badge bg-secondary me-1">Python</span>
-              <span class="badge bg-secondary me-1">LLM</span>
+              <span class="badge bg-secondary me-1">Qwen3.5</span>
               <span class="badge bg-secondary me-1">RML</span>
               <span class="badge bg-secondary me-1">RDF</span>
-              <span class="badge bg-secondary me-1">SPARQL</span>
+              <span class="badge bg-secondary me-1">SHACL</span>
+              <span class="badge bg-secondary me-1">FastAPI</span>
             </div>
           </div>
 
