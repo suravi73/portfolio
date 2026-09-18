@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script>(function(){try{if(localStorage.getItem('site-lang')==='de'){document.documentElement.setAttribute('data-lang','de');}}catch(e){}})();</script>
 
   <title>Projects | Suryalaxmi Ravianandan</title>
   <meta name="description" content="Personal and academic projects by Suryalaxmi Ravianandan — LLMs, knowledge graphs, semantic IoT, and data governance.">
@@ -10,7 +11,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -19,19 +20,37 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light site-nav sticky-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">Suryalaxmi</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav gap-3">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="resume.html">Education</a></li>
-          <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link lang-en" href="index.html">Home</a>
+            <a class="nav-link lang-de" href="index.html">Start</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link lang-en" href="resume.html">Education</a>
+            <a class="nav-link lang-de" href="resume.html">Ausbildung</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active lang-en" href="projects.html">Projects</a>
+            <a class="nav-link active lang-de" href="projects.html">Projekte</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link lang-en" href="contact.html">Contact</a>
+            <a class="nav-link lang-de" href="contact.html">Kontakt</a>
+          </li>
         </ul>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <div class="lang-switch" role="group" aria-label="Language switch">
+          <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+          <button type="button" class="lang-btn" data-lang-btn="de">DE</button>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
     </div>
   </nav>
@@ -39,24 +58,39 @@
   <main class="page-main section py-5">
     <div class="container">
       <div class="section-title text-center mb-5" data-aos="fade-up">
-        <h2 class="fw-bold">Projects</h2>
-        <p class="text-muted">Academic work from my M.Sc. in Data Science and personal side projects</p>
+        <span class="eyebrow lang-en">Work</span>
+        <span class="eyebrow lang-de">Arbeit</span>
+        <h2 class="fw-bold lang-en">Projects</h2>
+        <h2 class="fw-bold lang-de">Projekte</h2>
+        <p class="text-muted lang-en">Academic work from my M.Sc. in Data Science and personal side projects</p>
+        <p class="text-muted lang-de">Akademische Arbeiten aus meinem M.Sc. in Data Science sowie persönliche Nebenprojekte</p>
       </div>
 
       <div class="row justify-content-center">
         <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
 
-          <h3 class="resume-title border-bottom pb-2 mb-4">Academic Projects & Seminars</h3>
+          <h3 class="resume-title border-bottom pb-2 mb-4 lang-en">Academic Projects & Seminars</h3>
+          <h3 class="resume-title border-bottom pb-2 mb-4 lang-de">Akademische Projekte & Seminare</h3>
 
-          <div class="resume-item mb-4 p-3 border rounded bg-white shadow-sm">
-            <h4 class="mb-1">Master Thesis </h4>
+          <div class="resume-item featured-item mb-4 p-3 border rounded shadow-sm">
+            <span class="eyebrow lang-en">Featured · M.Sc. Thesis</span>
+            <span class="eyebrow lang-de">Highlight · Masterarbeit</span>
+            <h4 class="mb-1 mt-1 lang-en">Master Thesis</h4>
+            <h4 class="mb-1 mt-1 lang-de">Masterarbeit</h4>
             <h5 class="text-primary small mb-2">Automated Semantic IoT Data Integration for Flexible Shop Floors Using WoT Thing Descriptions</h5>
-            <h6 class="text-muted small mb-3">Sep 2026</h6>
-            <ul class="small mb-3">
+            <h6 class="text-muted small mb-3 lang-en">Sep 2026</h6>
+            <h6 class="text-muted small mb-3 lang-de">Sept. 2026</h6>
+            <ul class="small mb-3 lang-en">
               <li>Built an ontology-aware LLM pipeline that automatically generates validated RML mappings from W3C WoT Thing Descriptions and CSV sensor data, replacing manual knowledge-graph authoring. Evaluated against hand-authored ground truth across 4 IoT scenarios (triple-level F1, TriplesMap completeness, ontology-usage metrics).</li>
               <li>Architected a 4-stage constraint-narrowing pipeline (CSV analysis → TD semantic mapping → RML generation → error refinement), where each stage pre-computes facts (columns, ontology terms, auto-derived TriplesMap blueprint) to shrink the next call's decision space and suppress hallucination.</li>
               <li>Implemented a two-layer self-repair loop: LLM-invoked validation tools (Turtle/SHACL) during generation via function calling, plus a Python outer loop that re-prompts with error-type-specific templates until a valid mapping is produced (inner 5 / outer 3 cycles).</li>
               <li>Selected Qwen3.5 over Llama 3.3 for tool-calling reliability; validated with pySHACL against W3C RML Core shapes.</li>
+            </ul>
+            <ul class="small mb-3 lang-de">
+              <li>Eine ontologiebewusste LLM-Pipeline entwickelt, die automatisch validierte RML-Mappings aus W3C-WoT-Thing-Descriptions und CSV-Sensordaten erzeugt und die manuelle Erstellung von Knowledge Graphs ersetzt. Evaluiert gegen manuell erstellte Referenzdaten über 4 IoT-Szenarien hinweg (Triple-Level-F1, TriplesMap-Vollständigkeit, Ontologie-Nutzungsmetriken).</li>
+              <li>Eine 4-stufige, einschränkungsverengende Pipeline konzipiert (CSV-Analyse → semantisches TD-Mapping → RML-Generierung → Fehlerkorrektur), bei der jede Stufe vorab Fakten berechnet (Spalten, Ontologiebegriffe, automatisch abgeleiteter TriplesMap-Entwurf), um den Entscheidungsraum des nächsten Aufrufs zu verkleinern und Halluzinationen zu unterdrücken.</li>
+              <li>Eine zweischichtige Selbstkorrekturschleife implementiert: vom LLM aufgerufene Validierungstools (Turtle/SHACL) während der Generierung per Function Calling, plus eine äußere Python-Schleife, die mit fehlertypspezifischen Vorlagen erneut anfragt, bis ein gültiges Mapping entsteht (5 innere / 3 äußere Zyklen).</li>
+              <li>Qwen3.5 statt Llama 3.3 für zuverlässigeres Tool-Calling gewählt; mit pySHACL gegen die W3C-RML-Core-Shapes validiert.</li>
             </ul>
             <div class="skill-tags">
               <span class="badge bg-secondary me-1">Python</span>
@@ -69,12 +103,19 @@
           </div>
 
           <div class="resume-item mb-4 p-3 border rounded bg-white shadow-sm">
-            <h4 class="mb-1">🔍 Knowledge Graph Deconstruction</h4>
-            <h5 class="text-muted small mb-2">July 2024</h5>
-            <p class="small mb-2">Built an interpreter to parse RML mappings and convert RDF datasets to CSV, using SPARQL for targeted extraction from RDF sources to improve downstream analytics efficiency.</p>
-            <ul class="small mb-3">
+            <h4 class="mb-1 lang-en">🔍 Knowledge Graph Deconstruction</h4>
+            <h4 class="mb-1 lang-de">🔍 Knowledge-Graph-Dekonstruktion</h4>
+            <h5 class="text-muted small mb-2 lang-en">July 2024</h5>
+            <h5 class="text-muted small mb-2 lang-de">Juli 2024</h5>
+            <p class="small mb-2 lang-en">Built an interpreter to parse RML mappings and convert RDF datasets to CSV, using SPARQL for targeted extraction from RDF sources to improve downstream analytics efficiency.</p>
+            <p class="small mb-2 lang-de">Einen Interpreter entwickelt, der RML-Mappings parst und RDF-Datensätze in CSV umwandelt, unter Verwendung von SPARQL für die gezielte Extraktion aus RDF-Quellen, um die nachgelagerte Analyseeffizienz zu verbessern.</p>
+            <ul class="small mb-3 lang-en">
               <li>Knowledge graphs are powerful but hard to analyze directly; this project simplifies semantic data handling for data scientists.</li>
               <li><a href="https://github.com/wintechis/ReversingRmlToCsv" target="_blank" rel="noopener noreferrer" class="text-decoration-none">🔗 GitHub Repository</a></li>
+            </ul>
+            <ul class="small mb-3 lang-de">
+              <li>Knowledge Graphs sind mächtig, aber schwer direkt zu analysieren; dieses Projekt vereinfacht den semantischen Datenumgang für Data Scientists.</li>
+              <li><a href="https://github.com/wintechis/ReversingRmlToCsv" target="_blank" rel="noopener noreferrer" class="text-decoration-none">🔗 GitHub-Repository</a></li>
             </ul>
             <div class="skill-tags">
               <span class="badge bg-secondary me-1">Python</span>
@@ -85,9 +126,12 @@
           </div>
 
           <div class="resume-item mb-4 p-3 border rounded bg-white shadow-sm">
-            <h4 class="mb-1">📊 Master Seminar: SCGD</h4>
-            <h5 class="text-muted small mb-2">July 2024</h5>
-            <p class="small mb-2">Implemented Stochastic Compositional Gradient Descent within a Markov decision process to optimize Bellman residuals for stochastic shortest path problems.</p>
+            <h4 class="mb-1 lang-en">📊 Master Seminar: SCGD</h4>
+            <h4 class="mb-1 lang-de">📊 Masterseminar: SCGD</h4>
+            <h5 class="text-muted small mb-2 lang-en">July 2024</h5>
+            <h5 class="text-muted small mb-2 lang-de">Juli 2024</h5>
+            <p class="small mb-2 lang-en">Implemented Stochastic Compositional Gradient Descent within a Markov decision process to optimize Bellman residuals for stochastic shortest path problems.</p>
+            <p class="small mb-2 lang-de">Stochastic Compositional Gradient Descent innerhalb eines Markow-Entscheidungsprozesses implementiert, um Bellman-Residuen für stochastische Kürzeste-Wege-Probleme zu optimieren.</p>
             <div class="skill-tags">
               <span class="badge bg-secondary me-1">Python</span>
               <span class="badge bg-secondary me-1">Matplotlib</span>
@@ -95,16 +139,27 @@
           </div>
 
           <div class="resume-item mb-4 p-3 border rounded bg-white shadow-sm">
-            <h4 class="mb-1">🛡️ Data Governance in Healthcare</h4>
-            <p class="small mb-2"><strong>⇒ Foundation – "Healthcare Robots" case study (Feb 2025)</strong></p>
-            <ul class="small mb-3">
+            <h4 class="mb-1 lang-en">🛡️ Data Governance in Healthcare</h4>
+            <h4 class="mb-1 lang-de">🛡️ Data Governance im Gesundheitswesen</h4>
+            <p class="small mb-2 lang-en"><strong>⇒ Foundation – "Healthcare Robots" case study (Feb 2025)</strong></p>
+            <p class="small mb-2 lang-de"><strong>⇒ Grundlage – Fallstudie "Healthcare Robots" (Feb. 2025)</strong></p>
+            <ul class="small mb-3 lang-en">
               <li>Developed a data governance strategy for elderly-care robotics, covering legal compliance, privacy, and the tensions between fairness, security, and regulation.</li>
               <li>Applied privacy-preserving methods aligned with EU regulatory standards.</li>
             </ul>
-            <p class="small mb-2"><strong>⇒ Application – "Chatbot Training for Healthcare" (Sep 2025) · group seminar, owned the Privacy & Anonymisation workstream</strong></p>
-            <ul class="small mb-3">
+            <ul class="small mb-3 lang-de">
+              <li>Eine Data-Governance-Strategie für Pflegerobotik entwickelt, die rechtliche Compliance, Datenschutz und die Spannungsfelder zwischen Fairness, Sicherheit und Regulierung abdeckt.</li>
+              <li>Datenschutzfreundliche Verfahren angewendet, die den EU-Regulierungsstandards entsprechen.</li>
+            </ul>
+            <p class="small mb-2 lang-en"><strong>⇒ Application – "Chatbot Training for Healthcare" (Sep 2025) · group seminar, owned the Privacy & Anonymisation workstream</strong></p>
+            <p class="small mb-2 lang-de"><strong>⇒ Anwendung – "Chatbot Training for Healthcare" (Sept. 2025) · Gruppenseminar, Verantwortung für den Bereich Datenschutz & Anonymisierung</strong></p>
+            <ul class="small mb-3 lang-en">
               <li>Mapped GDPR obligations for sensitive medical text and audited a mental-health dataset for privacy and re-identification risk.</li>
               <li>Implemented anonymization in Python — tokenization with a secure mapping vault, multi-level redaction, and k-anonymity / l-diversity over quasi-identifiers — and critically evaluated each technique's limitations.</li>
+            </ul>
+            <ul class="small mb-3 lang-de">
+              <li>DSGVO-Pflichten für sensible medizinische Texte erfasst und einen Datensatz zu psychischer Gesundheit auf Datenschutz- und Re-Identifikationsrisiken geprüft.</li>
+              <li>Anonymisierung in Python implementiert — Tokenisierung mit einem sicheren Mapping-Tresor, mehrstufige Schwärzung sowie k-Anonymität / l-Diversität über Quasi-Identifikatoren — und die Grenzen jeder Technik kritisch bewertet.</li>
             </ul>
             <div class="skill-tags">
               <span class="badge bg-secondary me-1">Python</span>
@@ -115,16 +170,27 @@
             </div>
           </div>
 
-          <h3 class="resume-title border-bottom pb-2 mb-4 mt-5">Personal Projects</h3>
-          <div class="resume-item mb-4 p-3 border rounded bg-white shadow-sm">
-            <h4 class="mb-1">🤖 Insightbot: Intelligent Q&A Assistant</h4>
-            <p class="small mb-2">
+          <h3 class="resume-title border-bottom pb-2 mb-4 mt-5 lang-en">Personal Projects</h3>
+          <h3 class="resume-title border-bottom pb-2 mb-4 mt-5 lang-de">Persönliche Projekte</h3>
+          <div class="resume-item featured-item mb-4 p-3 border rounded shadow-sm">
+            <span class="eyebrow lang-en">Featured</span>
+            <span class="eyebrow lang-de">Highlight</span>
+            <h4 class="mb-1 mt-1">🤖 Insightbot: Intelligent Q&A Assistant</h4>
+            <p class="small mb-2 lang-en">
               A context-aware Q&A assistant that lets users ask questions about any PDF document or website content.
             </p>
-            <ul class="small mb-3">
+            <p class="small mb-2 lang-de">
+              Ein kontextbewusster Q&A-Assistent, mit dem Nutzer Fragen zu beliebigen PDF-Dokumenten oder Webseiteninhalten stellen können.
+            </p>
+            <ul class="small mb-3 lang-en">
               <li>Powered by Groq's ultra-fast inference for chat, paired with Google Gemini embeddings for true retrieval-augmented generation (RAG) — documents are chunked, embedded, and only the most relevant excerpts are retrieved per question for accurate, source-grounded answers.</li>
               <li><strong>Technical:</strong> Python backend, Groq API integration, Google Gemini embeddings, PDF text extraction (PyPDF2), web scraping (BeautifulSoup), semantic chunking + vector retrieval (NumPy cosine similarity)</li>
               <li>🔗 <a href="https://github.com/suravi73/insightbot" target="_blank" rel="noopener noreferrer" class="text-decoration-none">View Code on GitHub</a></li>
+            </ul>
+            <ul class="small mb-3 lang-de">
+              <li>Angetrieben von Groqs ultraschneller Inferenz für den Chat, kombiniert mit Google-Gemini-Embeddings für echte Retrieval-Augmented Generation (RAG) — Dokumente werden in Chunks zerlegt, eingebettet, und pro Frage werden nur die relevantesten Ausschnitte abgerufen, für präzise, quellenbasierte Antworten.</li>
+              <li><strong>Technisch:</strong> Python-Backend, Groq-API-Integration, Google-Gemini-Embeddings, PDF-Textextraktion (PyPDF2), Web Scraping (BeautifulSoup), semantisches Chunking + Vektorsuche (NumPy Cosine Similarity)</li>
+              <li>🔗 <a href="https://github.com/suravi73/insightbot" target="_blank" rel="noopener noreferrer" class="text-decoration-none">Code auf GitHub ansehen</a></li>
             </ul>
             <div class="skill-tags">
               <span class="badge bg-secondary me-1">Python</span>
@@ -137,15 +203,25 @@
           </div>
 
           <div class="resume-item mb-4 p-3 border rounded bg-white shadow-sm">
-            <h4 class="mb-1">🔍 Forensic Metadata Analyzer</h4>
-            <p class="small mb-2">
+            <h4 class="mb-1 lang-en">🔍 Forensic Metadata Analyzer</h4>
+            <h4 class="mb-1 lang-de">🔍 Forensischer Metadaten-Analyzer</h4>
+            <p class="small mb-2 lang-en">
               A dual-model forensic tool that analyzes digital artifacts to discover both obvious and hidden relationships using metadata clustering.
             </p>
-            <ul class="small mb-3">
+            <p class="small mb-2 lang-de">
+              Ein forensisches Tool mit zwei Modellen, das digitale Artefakte analysiert, um mittels Metadaten-Clustering sowohl offensichtliche als auch versteckte Zusammenhänge aufzudecken.
+            </p>
+            <ul class="small mb-3 lang-en">
               <li><strong>Dual-Model Logic:</strong> Similarity Model clusters identical fields; Unique Model finds sparse associations across different fields (e.g., tag='stolen' ↔ copyright='stolen').</li>
               <li><strong>IT Admin Skill:</strong> Manages system-level dependencies (Exiftool) + Python wrapper integration.</li>
               <li><strong>Detail-Oriented:</strong> Handles edge cases like missing/corrupt metadata gracefully.</li>
               <li>🔗 <a href="https://github.com/suravi73/forensic-analyzer" target="_blank" rel="noopener noreferrer" class="text-decoration-none">View Code on GitHub</a></li>
+            </ul>
+            <ul class="small mb-3 lang-de">
+              <li><strong>Zwei-Modell-Logik:</strong> Das Similarity-Modell clustert identische Felder; das Unique-Modell findet spärliche Zusammenhänge zwischen unterschiedlichen Feldern (z. B. tag='stolen' ↔ copyright='stolen').</li>
+              <li><strong>IT-Admin-Kompetenz:</strong> Verwaltet systemnahe Abhängigkeiten (Exiftool) + Python-Wrapper-Integration.</li>
+              <li><strong>Detailgenauigkeit:</strong> Behandelt Randfälle wie fehlende oder beschädigte Metadaten robust.</li>
+              <li>🔗 <a href="https://github.com/suravi73/forensic-analyzer" target="_blank" rel="noopener noreferrer" class="text-decoration-none">Code auf GitHub ansehen</a></li>
             </ul>
             <div class="skill-tags">
               <span class="badge bg-secondary me-1">Python</span>
@@ -161,13 +237,15 @@
 
   <footer class="py-4 text-center text-muted small border-top">
     <div class="container">
-      &copy; 2026 Suryalaxmi Ravianandan. Built with ❤️ using HTML, CSS & Bootstrap.
+      <span class="lang-en">&copy; 2026 Suryalaxmi Ravianandan. Built with ❤️ using HTML, CSS & Bootstrap.</span>
+      <span class="lang-de">&copy; 2026 Suryalaxmi Ravianandan. Erstellt mit ❤️ mit HTML, CSS & Bootstrap.</span>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init({ duration: 800, once: true });</script>
+  <script src="js/lang.js"></script>
 
 </body>
 </html>
